@@ -58,7 +58,9 @@ fetch(
         articlesContainer.appendChild(articleElement);
       });
     } else {
-      console.error('Error fetching articles:', data);
+      console.error('Error fetching articles. Response object:', data);
+      console.error('Status:', data.status);
+      console.error('Message:', data.message);
     }
   })
   .catch((error) => {
